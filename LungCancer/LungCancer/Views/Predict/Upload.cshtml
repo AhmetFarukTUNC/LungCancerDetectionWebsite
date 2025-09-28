@@ -1,0 +1,85 @@
+﻿@{
+    ViewData["Title"] = "Predict";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"]</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            min-height: 100vh;
+            color: white;
+            text-align: center;
+            background: linear-gradient(90deg, #ff6ec7, #6a0cff, #00d4ff, #ff6ec7);
+            background-size: 400% 400%;
+            transition: background-position 0.05s linear;
+        }
+
+        h1 { font-size: 3rem; margin: 30px 0 10px; text-shadow: 0 0 5px #fff, 0 0 10px #ff00de; }
+        h2 { font-size: 2.5rem; margin-bottom: 10px; text-shadow: 0 0 5px #fff, 0 0 10px #ff00de; }
+        p { max-width: 600px; font-size: 1.1rem; margin: 0 auto 30px auto; text-align: center; }
+
+        input[type="file"] {
+            padding: 12px; border-radius: 12px; border: 2px solid white;
+            background: rgba(255,255,255,0.2); color: #fff; cursor: pointer;
+            margin-bottom: 20px; transition: all 0.3s ease;
+        }
+        input[type="file"]:hover { box-shadow: 0 0 15px #ff00de, 0 0 25px #00f; transform: scale(1.05); }
+
+        button {
+            padding: 14px 30px; border: none; border-radius: 50px; font-size: 1.2rem;
+            font-weight: bold; color: white; background: linear-gradient(90deg, #ff6ec7, #6a0cff, #00d4ff);
+            cursor: pointer; box-shadow: 0 0 10px #ff0, 0 0 20px #f0f; transition: all 0.3s ease;
+        }
+        button:hover { transform: scale(1.1); box-shadow: 0 0 20px #ff0, 0 0 40px #f0f, 0 0 60px #0ff; }
+
+        .result {
+            margin-top: 20px; padding: 15px 25px; border-radius: 20px;
+            background: rgba(255,255,255,0.2); color: black; font-weight: bold;
+            text-shadow: 0 0 5px #fff, 0 0 10px #ff00de; transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .form-container { display: flex; flex-direction: column; align-items: center; justify-content: center; }
+    </style>
+</head>
+<body>
+
+    <div class="form-container">
+        <h1>🌈 Lung Cancer AI 🌈</h1>
+        <h2>Predict Your Scan Instantly!</h2>
+        <p>Upload your scan and get an AI-powered prediction within seconds. Fast, accurate, and visually fun!</p>
+
+        <form asp-controller="Predict" asp-action="Upload" method="post" enctype="multipart/form-data">
+            <input type="file" name="file" required />
+            <br />
+            <button type="submit">Predict Now</button>
+        </form>
+
+        @if (ViewBag.Result != null)
+        {
+            <div class="result">
+                @Html.Raw(ViewBag.Result)
+            </div>
+        }
+    </div>
+
+    <script>
+        // Arka plan kaydırma animasyonu
+        let position = 0;
+        function animateBackground() {
+            position += 1;
+            if (position > 400) position = 0;
+            document.body.style.backgroundPosition = position + "% 50%";
+            requestAnimationFrame(animateBackground);
+        }
+        animateBackground();
+    </script>
+
+</body>
+</html>

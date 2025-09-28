@@ -1,0 +1,62 @@
+﻿@{
+    ViewData["Title"] = "Home";
+}
+
+<div class="container py-5">
+
+    <!-- Hero Section -->
+    <div class="text-center mb-5">
+        <h1 class="fw-bold text-success">Lung Tumor Prediction System</h1>
+        <p class="lead text-muted">
+            With our AI-powered system, you can classify lung tumors into 3 types.
+        </p>
+        <a class="btn btn-success btn-lg px-4 mt-3" asp-controller="Predict" asp-action="Upload">
+            Make a Prediction
+        </a>
+    </div>
+
+    <!-- Info Cards -->
+    <div class="row g-4">
+        <div class="col-md-4">
+            <div class="card h-100 shadow-sm border-0 rounded-4">
+                <div class="card-body text-center">
+                    <h5 class="card-title text-success">Adenocarcinoma</h5>
+                    <p class="card-text">
+                        One of the most common types of lung cancer. Early detection is important.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card h-100 shadow-sm border-0 rounded-4">
+                <div class="card-body text-center">
+                    <h5 class="card-title text-success">Squamous Cell Carcinoma</h5>
+                    <p class="card-text">
+                        This tumor type develops in the bronchi and is associated with smoking.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card h-100 shadow-sm border-0 rounded-4">
+                <div class="card-body text-center">
+                    <h5 class="card-title text-success">Benign Tumor</h5>
+                    <p class="card-text">
+                        A non-cancerous growth that usually does not spread and is generally less harmful.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+<!-- Footer -->
+<footer class="bg-light text-center py-3 mt-5 border-top">
+    <p class="mb-0 text-muted">
+        © @DateTime.Now.Year - AI-powered Lung Tumor Prediction System
+    </p>
+</footer>

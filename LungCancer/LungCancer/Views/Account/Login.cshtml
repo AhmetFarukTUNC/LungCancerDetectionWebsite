@@ -1,0 +1,135 @@
+﻿@model LungCancer.Models.User
+@{
+    ViewData["Title"] = "Login";
+}
+
+<div class="login-container d-flex flex-column min-vh-100">
+    <!-- Login form merkezi kısım -->
+    <div class="login-content d-flex justify-content-center align-items-center flex-grow-1">
+        <div class="login-card text-center">
+            <h1 class="login-title">🌈 Lung AI Login</h1>
+            <p class="login-subtitle">Access your account with ease and style!</p>
+
+            <form asp-action="Login" method="post" class="mt-4">
+                <input asp-for="Username" class="form-control mb-3" placeholder="Username" />
+                <input asp-for="Password" class="form-control mb-3" placeholder="Password" type="password" />
+                <button type="submit" class="btn btn-gradient w-100">Login</button>
+            </form>
+
+            <div class="mt-3">
+                <span>Don't have an account? </span>
+                <a asp-controller="Account" asp-action="Register" class="text-warning fw-bold">Register</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer kısmı en altta, tek ve sabit -->
+    
+</div>
+
+<style>
+    body {
+        margin: 0;
+        font-family: 'Segoe UI', sans-serif;
+        background: linear-gradient(135deg, #ff6ec7);
+        min-height: 100vh;
+    }
+
+    .login-container {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
+
+    .login-content {
+        flex: 1 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 40px 20px;
+    }
+
+    .login-card {
+        background: rgba(255, 255, 255, 0.15);
+        backdrop-filter: blur(20px);
+        padding: 40px;
+        border-radius: 25px;
+        max-width: 400px;
+        width: 100%;
+        box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+        color: #fff;
+    }
+
+    .login-title {
+        font-size: 2.5rem;
+        font-weight: bold;
+        margin-bottom: 10px;
+        background: linear-gradient(90deg, #ff6ec7, #6a11cb, #00d4ff);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .login-subtitle {
+        font-size: 1rem;
+        color: rgba(255,255,255,0.8);
+        margin-bottom: 5%;
+    }
+
+    .form-control {
+        background: rgba(255,255,255,0.2);
+        border: none;
+        border-radius: 12px;
+        padding: 12px;
+        color: #fff;
+        font-size: 1rem;
+        width: 100%;
+        box-sizing: border-box;
+        margin-bottom: 12px;
+        transition: all 0.3s ease;
+    }
+
+        .form-control::placeholder {
+            color: rgba(255,255,255,0.6);
+        }
+
+        .form-control:focus {
+            outline: none;
+            box-shadow: 0 0 10px rgba(255,255,255,0.7);
+            background: rgba(255,255,255,0.25);
+        }
+
+    .btn-gradient {
+        padding: 14px;
+        font-weight: bold;
+        font-size: 1.1rem;
+        border-radius: 25px;
+        background: linear-gradient(90deg, #ff6ec7, #6a11cb, #00d4ff);
+        border: none;
+        color: #fff;
+        width: 100%;
+        transition: all 0.3s ease;
+    }
+
+        .btn-gradient:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+        }
+
+    .text-warning {
+        color: #ffd700 !important;
+    }
+
+    .footer {
+        background-color: #000;
+        flex-shrink: 0;
+    }
+
+        .footer a {
+            color: #ffd700;
+            text-decoration: none;
+        }
+
+            .footer a:hover {
+                text-decoration: underline;
+            }
+</style>

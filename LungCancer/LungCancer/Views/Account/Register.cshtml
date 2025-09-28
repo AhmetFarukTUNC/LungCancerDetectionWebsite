@@ -1,0 +1,88 @@
+﻿@model LungCancer.Models.User
+@{
+    ViewData["Title"] = "Register";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section Styles {
+    <style>
+        body {
+            background: linear-gradient(135deg, #6a11cb, #2575fc);
+        }
+
+        .auth-card {
+            background: rgba(255,255,255,0.15);
+            border-radius: 20px;
+            padding: 40px;
+            max-width: 400px;
+            margin: 50px auto;
+            backdrop-filter: blur(15px);
+            box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+            color: #fff;
+            text-align: center;
+        }
+
+            .auth-card h2 {
+                background: linear-gradient(90deg, #ff6ec7, #6a11cb, #00d4ff);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                margin-bottom: 25px;
+            }
+
+        .form-control {
+            background: rgba(255,255,255,0.2);
+            border: none;
+            border-radius: 12px;
+            padding: 12px;
+            margin-bottom: 15px;
+            color: #fff;
+        }
+
+            .form-control::placeholder {
+                color: rgba(255,255,255,0.7);
+            }
+
+        .btn-auth {
+            background: linear-gradient(90deg, #ff6ec7, #6a11cb, #00d4ff);
+            border: none;
+            border-radius: 12px;
+            padding: 12px;
+            width: 100%;
+            font-weight: bold;
+            color: white;
+            transition: 0.3s ease;
+        }
+
+            .btn-auth:hover {
+                transform: scale(1.05);
+                box-shadow: 0 0 15px rgba(255,255,255,0.6);
+            }
+
+        .extra-link {
+            margin-top: 15px;
+            font-size: 0.9em;
+        }
+
+            .extra-link a {
+                color: #ffd700;
+                text-decoration: none;
+            }
+
+                .extra-link a:hover {
+                    text-decoration: underline;
+                }
+    </style>
+}
+
+<div class="auth-card">
+    <h2>Create Account</h2>
+    <form asp-action="Register" method="post">
+        <input asp-for="Username" class="form-control" placeholder="Username" />
+        <input asp-for="Email" class="form-control" placeholder="Email" />
+        <input asp-for="Password" class="form-control" placeholder="Password" type="password" />
+        <button type="submit" class="btn-auth">Sign Up</button>
+    </form>
+    <div class="extra-link">
+        Already have an account? <a asp-action="Login" asp-controller="Account">Login</a>
+    </div>
+</div>
