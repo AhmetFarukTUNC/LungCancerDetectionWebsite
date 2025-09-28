@@ -64,3 +64,12 @@ Machine Learning: Flask REST API (Python)
 Session & Authentication: ASP.NET Core Session
 
 Validation: Razor Validation + jQuery client-side validation
+
+Images
+
+![Screenshot of Predict Page](wwwroot/images/screenshot1.png)
+![Screenshot of Predict Page](wwwroot/images/screenshot1.png)
+![Screenshot of Predict Page](wwwroot/images/screenshot1.png)
+![Screenshot of Predict Page](wwwroot/images/screenshot1.png)
+![Screenshot of Predict Page](wwwroot/images/screenshot1.png)
+![Screenshot of Predict Page](wwwroot/images/screenshot1.png)
