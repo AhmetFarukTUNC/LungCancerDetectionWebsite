@@ -67,9 +67,9 @@ Validation: Razor Validation + jQuery client-side validation
 
 Images
 
-![Screenshot of Predict Page](wwwroot/images/screenshot1.png)
-![Screenshot of Predict Page](wwwroot/images/screenshot1.png)
-![Screenshot of Predict Page](wwwroot/images/screenshot1.png)
-![Screenshot of Predict Page](wwwroot/images/screenshot1.png)
-![Screenshot of Predict Page](wwwroot/images/screenshot1.png)
-![Screenshot of Predict Page](wwwroot/images/screenshot1.png)
+![Screenshot of Predict Page](https://github.com/AhmetFarukTUNC/LungCancerDetectionWebsite/blob/main/LungCancer/LungCancer/img/about.png)
+![Screenshot of Predict Page](https://github.com/AhmetFarukTUNC/LungCancerDetectionWebsite/blob/main/LungCancer/LungCancer/img/contact.png)
+![Screenshot of Predict Page](https://github.com/AhmetFarukTUNC/LungCancerDetectionWebsite/blob/main/LungCancer/LungCancer/img/homepage.png)
+![Screenshot of Predict Page](https://github.com/AhmetFarukTUNC/LungCancerDetectionWebsite/blob/main/LungCancer/LungCancer/img/privacy.png)
+![Screenshot of Predict Page](https://github.com/AhmetFarukTUNC/LungCancerDetectionWebsite/blob/main/LungCancer/LungCancer/img/predict.png)
+![Screenshot of Predict Page](https://github.com/AhmetFarukTUNC/LungCancerDetectionWebsite/blob/main/LungCancer/LungCancer/img/history.png)
